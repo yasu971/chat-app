@@ -3,9 +3,7 @@ require 'rails_helper'
 RSpec.describe Message, type: :model do
   describe '#create' do
     before do
-    # 中間テーブルを作成して、associationによりusersテーブルとroomsテーブルのレコードも作成する
-    @room_user = FactoryBot.create(:room_user)
-        @message = FactoryBot.build(:message)
+      @message = FactoryBot.build(:message)
     end
 
     it 'contentとimageが存在していれば保存できること' do
